@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #8098e0, #9aaee8);
+}
+
+
+.container {
+    background: white;
+    padding: 2em;
+    width: 23em;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+
+.heding-name h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+
+.input-value p {
+    margin-bottom: 0.4em;
+    font-weight: 500;
+}
+
+.input-value input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-value input:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 6px #4e73df70;
+}
+
+
+.selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.from, .to {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.from select,
+.to select {
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    border: 2px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+select{
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+.from select:focus,
+.to select:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 6px #4e73df70;
+}
+.selector i {
+    font-size: 1.5em;
+    color: #4e73df;
+    margin-top: 1.2em;
+}
+
+
+.paragrap {
+    text-align: center;
+    margin-top: 1.5em;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.btn {
+    margin-top: 1.5em;
+}
+
+.btn button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(135deg, #4e73df, #6f8cff);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #3f67e0, #5e74cc);
+
+}
+
+
+/* responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    .heding-name h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* responsive8 */
+@media (max-width: 480px) {
+
+    body {
+        padding: 1em;
+    }
+
+    .container {
+        width: 100%;
+        padding: 1.2em;
+        border-radius: 15px;
+    }
+
+    .selector {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .selector i {
+        transform: rotate(90deg);
+        margin: 0;
+    }
+
+    .from, .to {
+        width: 100%;
+    }
+
+    .from select,
+    .to select {
+        width: 100%;
+    }
+
+    .btn button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
